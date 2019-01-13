@@ -1,24 +1,20 @@
 public class HelloWorld{
 
-     public static void main(String []args)
-     {
+     public static void main(String []args){
         int[] inputArray = {123,122,50,-4,20,30,15,6};
         
         
-        for(int firstUnsortedIndex=1;firstUnsortedIndex<inputArray.length;firstUnsortedIndex++)
+        for(int lastUnsortedIndex = inputArray.length-1;lastUnsortedIndex>0;lastUnsortedIndex--)
         {
-            int minimum = 0;
-            for(int i=inputArray.length-1;i>0;i--)
+            int largest = 0;
+            for(int i=1;i<lastUnsortedIndex;i++)
             {
-                
-                if(inputArray[minimum]>inputArray[i])
+                if(inputArray[largest]<inputArray[i])
                 {
-                    minimum = i;
+                    largest = i;
                 }
-                
             }
-            Swap(inputArray,minimum,firstUnsortedIndex);
-            
+            Swap(inputArray,lastUnsortedIndex,largest);
         }
         
         for(int i=0;i<inputArray.length;i++)
@@ -26,6 +22,8 @@ public class HelloWorld{
             System.out.println(inputArray[i]);
         }
         
+        
+        System.out.println("Hello World");
      }
      
      public static void Swap(int[] input,int i,int j)

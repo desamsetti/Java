@@ -1,19 +1,44 @@
 package com.company;
 
+import java.io.*;
+
 public class Main {
 
-    public static void main(String[] args) {
-	// write your code here
+    public static void main(String[] args) throws IOException {
+        // write your code here
         //int[] intArray = {20, 35, -15, 7, 55, 1, -22};
-        int[] intArray = {1,3,5,2,4,6};
+        int[] intArray = {1, 3, 5, 2, 4, 6};
 
-        mergeSort(intArray,0,intArray.length);
+        int[] newArray = new int[100000];
 
-        for(int i = 0;i<intArray.length;i++)
-        {
-            System.out.print(intArray[i] + " ");
+
+        File file = new File("C:\\Users\\MY DELL\\Desktop\\ArrayElements.txt");
+
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(file));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
+
+        String st;
+        while ((st = br.readLine()) != null)
+        {
+            System.out.println(st);
+            int i=0;
+            newArray[i] = Integer.valueOf(st);
+            i++;
+        }
+
+
+        //mergeSort(intArray, 0, intArray.length);
+        mergeSort(newArray,0,newArray.length);
+
+        /*for (int i = 0; i < intArray.length; i++) {
+            System.out.print(intArray[i] + " ");
+        }*/
     }
+
 
 
     //{20, 35, -15, 7, 55, 1, -22}

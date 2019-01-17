@@ -3,6 +3,20 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
+    /*
+    *1,2,3,4,5,6
+    Shift 4
+    6,1,2,3,4,5
+    5,6,1,2,3,4
+    4,5,6,1,2,3
+    3,4,5,6,1,2
+
+
+    1,2,3,4,5,6,7
+    2
+    3,4,5,6,7,1,2
+
+     */
 
     public static void main(String[] args) {
 	// write your code here
@@ -32,24 +46,13 @@ public class Main {
 
     }
 
-
     public static int[] shiftArrayElements(int n,int[] inputArray)
     {
         int[] newArray = new int[inputArray.length];
-        if(n==0)
-        {
-            return inputArray;
-        }
-        else
-        {
             for(int i=0;i<inputArray.length;i++)
             {
-                //                  4,5,6,1,2,3
-                //                  0 1 2 3 4 5
-                //int[] newArray = {1,2,3,4,5,6};
                 newArray[i] = inputArray[(i+n)%(inputArray.length)];
             }
-        }
         return newArray;
     }
 }

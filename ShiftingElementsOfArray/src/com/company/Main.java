@@ -24,6 +24,7 @@ public class Main {
         System.out.print("Enter the number of Array elements : ");
         int n = sc.nextInt();
         int[] newArray = new int[n];
+
         for(int i=0;i<n;i++)
         {
             System.out.print("Enter the element number "+(i+1)+" : ");
@@ -41,9 +42,7 @@ public class Main {
         {
             System.out.print(x+",");
         }
-
         sc.close();
-
     }
 
     public static int[] shiftArrayElements(int n,int[] inputArray)

@@ -18,68 +18,57 @@ import java.util.List;
 2.  126 = 1*2*6 = 12
 3.  12  = 1*2 = 2
 
-* */
-public class Main {
-    public static int counter = 0;
-    public static void main(String[] args) {
-	// write your code here
-        System.out.print(getNumber(9999));
-    }
+
+1. 9999 = 9*9*9*9 = 4608
+2. 4608 = 4*6*0*8 = 0
 
 
-    /*private static int getNumber(int num)
-    {
-        List<Integer> newList = new ArrayList<Integer>();
-        counter += 1;
-        while(num!=0)
-        {
-            int digit = num%10;
-            num /= 10;
-            newList.add(digit);
+1. 999 = 9*9*9 = 729
+2. 729 = 7*2*9 = 126
+3. 126 = 1*2*6 = 12
+4. 12 = 1*2 = 2
+
+
+* */ public class Main {
+        public static int counter = 0;
+        public static void main(String[] args) {
+            // write your code here
+            System.out.print(getNumber(999));
         }
 
-        int multiplyVal = 1;
-        for(int i=0;i<newList.size();i++)
-        {
-            multiplyVal = multiplyVal*newList.get(i);
-        }
 
-        if(String.valueOf(multiplyVal).length()!=1)
+        private static int getNumber(int num)
         {
-            getNumber(multiplyVal);
-        }
-        if(String.valueOf(multiplyVal).length()==1)
-        {
+            int multiplyVal = 1;
+
+            List<Integer> newList = new ArrayList<Integer>();
+
+
+            while(num!=0)
+            {
+                int digit = num%10;
+                num /= 10;
+                newList.add(digit);
+            }
+
+
+
+            for(int i=0;i<newList.size();i++)
+            {
+                multiplyVal = multiplyVal*newList.get(i);
+            }
+
+            if(String.valueOf(multiplyVal).length()!=1)
+            {
+                getNumber(multiplyVal);
+            }
+
+            if(String.valueOf(multiplyVal).length()==1||multiplyVal==0)
+            {
+                return counter;
+            }
+
+            counter += 1;
             return counter;
         }
-        return counter;
-    }*/
-
-    private static int getNumber(int num)
-    {
-        String val = String.valueOf(num);
-        char[] array1 = new char[val.length()];
-        array1 = val.toCharArray();
-        int mulVal = 1;
-
-        counter += 1;
-
-        for(int i=0;i<array1.length;i++)
-        {
-            mulVal = mulVal*Integer.valueOf(array1[i]);
-        }
-
-        /*if(String.valueOf(mulVal).length()==1)
-        {
-            return counter;
-        }*/
-
-        {
-            getNumber(mulVal);
-        }
-
-        return counter;
     }
-
-
-}

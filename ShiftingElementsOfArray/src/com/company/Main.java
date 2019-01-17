@@ -22,11 +22,13 @@ public class Main {
         int[] outputArray = shiftArrayElements(shiftVal,newArray);
         System.out.println();
         System.out.print("The array values after rotating the array is : ");
-        for(int i=0;i<outputArray.length;i++)
+
+        for(int x:outputArray)
         {
-            System.out.print(outputArray[i]+",");
+            System.out.print(x+",");
         }
 
+        sc.close();
 
     }
 

@@ -27,7 +27,7 @@ public class Main {
     }
 
 
-    private static int getNumber(int num)
+    /*private static int getNumber(int num)
     {
         List<Integer> newList = new ArrayList<Integer>();
         counter += 1;
@@ -48,10 +48,34 @@ public class Main {
         {
             getNumber(multiplyVal);
         }
-        /*if(String.valueOf(multiplyVal).length()==1)
+        if(String.valueOf(multiplyVal).length()==1)
         {
             return counter;
-        }*/
+        }
         return counter;
+    }*/
+
+    private static int getNumber(int num)
+    {
+        int mulVal = 1;
+        List<Integer> newList = new ArrayList<Integer>();
+        counter += 1;
+        while(num!=0)
+        {
+            int digit = num%10;
+            num /= 10;
+            newList.add(digit);
+        }
+
+        if(String.valueOf(mulVal).length()==1)
+        {
+            return counter;
+        }
+        else
+        {
+            getNumber(mulVal);
+        }
     }
+
+
 }

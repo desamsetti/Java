@@ -29,6 +29,10 @@ public class Main {
 
 //Using String Builder
 
+    public Main() {
+        super();
+    }
+
     /*public String reverseWords(String s) {
         String[] str = s.split(" ");
         for (int i = 0; i < str.length; i++) str[i] = new StringBuilder(str[i]).reverse().toString();

@@ -49,7 +49,12 @@ public class Main {
     public static int[] shiftArrayElements(int n,int[] inputArray)
     {
         int[] newArray = new int[inputArray.length];
-            for(int i=0;i<inputArray.length;i++)
+            /*for(int i=0;i<inputArray.length;i++)
+            {
+                newArray[i] = inputArray[(i+n)%(inputArray.length)];
+            }*/
+
+            for(int i=inputArray.length-1;i>=0;i--)
             {
                 newArray[i] = inputArray[(i+n)%(inputArray.length)];
             }

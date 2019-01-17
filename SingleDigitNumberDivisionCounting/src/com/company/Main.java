@@ -23,7 +23,7 @@ public class Main {
     public static int counter = 0;
     public static void main(String[] args) {
 	// write your code here
-        System.out.print(getNumber(999));
+        System.out.print(getNumber(9999));
     }
 
 
@@ -57,24 +57,28 @@ public class Main {
 
     private static int getNumber(int num)
     {
+        String val = String.valueOf(num);
+        char[] array1 = new char[val.length()];
+        array1 = val.toCharArray();
         int mulVal = 1;
-        List<Integer> newList = new ArrayList<Integer>();
+
         counter += 1;
-        while(num!=0)
+
+        for(int i=0;i<array1.length;i++)
         {
-            int digit = num%10;
-            num /= 10;
-            newList.add(digit);
+            mulVal = mulVal*Integer.valueOf(array1[i]);
         }
 
-        if(String.valueOf(mulVal).length()==1)
+        /*if(String.valueOf(mulVal).length()==1)
         {
             return counter;
-        }
-        else
+        }*/
+
         {
             getNumber(mulVal);
         }
+
+        return counter;
     }
 
 

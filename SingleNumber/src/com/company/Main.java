@@ -23,18 +23,21 @@ public class Main {
     /*4,1,2,1,2
       1,1,2,2,4*/
     //0,1,2,3,4
-    public static int singleNumber(int[] nums) {
+    public int singleNumber(int[] nums) {
         Arrays.sort(nums);
-        int val = 0;
-        for(int i=0;i<nums.length-1;i+=2)
-        {
-            if(nums[i]!=nums[i+1]|| i==nums.length-1)
-            {
-                val = nums[i];
-                return nums[i];
-            }
+        int size = nums.length;
+        int index1 = 0;
+        int index2 = 1;
+        if (size == 1){
+            return nums[0];
         }
-
-        return val;
+        while (index1<size-1){
+            if (nums[index1] != nums[index2]){
+                break;
+            }
+            index1 +=2;
+            index2 +=2;
+        }
+        return nums[index1];
     }
 }

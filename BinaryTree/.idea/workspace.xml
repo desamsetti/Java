@@ -27,8 +27,8 @@
       <file leaf-file-name="BinaryTree.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/BinaryTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="844" lean-forward="true" selection-start-line="823" selection-start-column="4" selection-end-line="844" />
+            <state relative-caret-position="322">
+              <caret line="830" column="9" lean-forward="true" selection-start-line="830" selection-start-column="9" selection-end-line="830" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#17497#17503#0" expanded="true" />
@@ -308,8 +308,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/BinaryTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="844" lean-forward="true" selection-start-line="823" selection-start-column="4" selection-end-line="844" />
+        <state relative-caret-position="322">
+          <caret line="830" column="9" lean-forward="true" selection-start-line="830" selection-start-column="9" selection-end-line="830" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#17497#17503#0" expanded="true" />

@@ -820,4 +820,49 @@ public class BinaryTree {
         }
     }
 
+
+    public Node lowestCommonAncestorBinaryTree(Node root1, Node n1,Node n2) {
+        if (root1 == null) {
+            return null;
+        }
+        //if(n1.key==root1.key || n2.key==root1.key)
+        if (root1 == n1 || root1 == n2) {
+            return root1;
+        }
+
+        Node left = lowestCommonAncestorBinaryTree(root1.leftChild, n1, n2);
+        Node right = lowestCommonAncestorBinaryTree(root1.rightChild, n1, n2);
+
+        if (left != null && right != null) {
+            return root1;
+        }
+        if (left == null && right == null) {
+            return null;
+        }
+        return left!=null?left:right;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
 }

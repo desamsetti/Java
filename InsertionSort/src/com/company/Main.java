@@ -6,8 +6,7 @@ public class Main {
 	// write your code here
         int[] intArray = {20,35,-15,7,55,1,-22};
 
-        //The Inser
-        // tion Algorithm is being executed as from left to right.
+        //The Insertion Algorithm is being executed as from left to right.
         //Hence, the first index which is 0 is assumed to be already sorted and hence the firstUnsortedIndex starts from 1.
         for(int firstUnsortedIndex = 1;firstUnsortedIndex<intArray.length;firstUnsortedIndex++)
         {

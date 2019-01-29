@@ -28,8 +28,6 @@ public class Main {
     }
 
 
-
-
     public static Boolean anagram(String str, String pair)
     {
         Map<Character,Integer> map1 = new HashMap<Character,Integer>();
@@ -38,26 +36,14 @@ public class Main {
         Integer counter2 = 1;
         for(int i=0;i<str.length();i++)
         {
-            if(map1.containsKey(str.charAt(i)))
-            {
-                map1.put(str.charAt(i),counter1+1);
-            }
-            else
-            {
-                map1.put(str.charAt(i),1);
-            }
+            int count = map1.containsKey(str.charAt(i))?map1.get(str.charAt(i)):0;
+            map1.put(str.charAt(i),count+1);
         }
 
         for(int i=0;i<pair.length();i++)
         {
-            if(map2.containsKey(pair.charAt(i)))
-            {
-                map2.put(pair.charAt(i),counter2+1);
-            }
-            else
-            {
-                map2.put(pair.charAt(i),1);
-            }
+            int count = map2.containsKey(pair.charAt(i))?map2.get(str.charAt(i)):0;
+            map2.put(pair.charAt(i),count+1);
         }
 
         if(map1.equals(map2))

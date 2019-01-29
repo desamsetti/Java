@@ -20,28 +20,31 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         Map<Character,Integer> map = new HashMap<Character, Integer>();
-        Integer counter = 1;
+
         for(int i=0;i<input.length();i++)
         {
-            if(map.containsKey(input.charAt(i)))
+            //if(map.containsKey(input.charAt(i)))
+            //{
+                int count = map.containsKey(input.charAt(i))?map.get(input.charAt(i)):0;
+                map.put(input.charAt(i),count+1);
+            //}
+            /*else
             {
-                map.put(input.charAt(i),counter+1);
-            }
-            else
-            {
-                map.put(input.charAt(i),1);
-            }
+
+                map.put(input.charAt(i),);
+            }*/
         }
 
 
         /*for (Character key : map.keySet()) {
             // use the key here
-            System.out.println(key);
+            System.out.print(key+" ");
         }
 
+        System.out.println("******");
         for (Integer value : map.values()) {
             // use the key here
-            System.out.println(value);
+            System.out.print(value+" ");
         }*/
 
         Map.Entry<Character, Integer> maxEntry = null;
@@ -50,10 +53,10 @@ public class Main {
             if(maxEntry==null||e.getValue().compareTo(maxEntry.getValue()) > 0)
             {
                 maxEntry = e;
-                System.out.println(maxEntry.getKey()+ "is the most");
             }
-            System.out.println(e.getKey() + ": " + e.getValue());
         }
+        System.out.println(maxEntry.getKey()+ " is the most occurred character with "+maxEntry.getValue()+" times");
+
 
 
 

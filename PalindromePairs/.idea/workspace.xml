@@ -15,14 +15,24 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="56" column="25" lean-forward="true" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+            <state relative-caret-position="239">
+              <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#316#331#0" expanded="true" />
-                <element signature="e#597#606#0" expanded="true" />
-                <element signature="e#976#985#0" expanded="true" />
+                <element signature="e#1354#1369#0" expanded="true" />
+                <element signature="e#1466#1482#0" expanded="true" />
+                <element signature="e#2140#2149#0" expanded="true" />
+                <element signature="e#2611#2620#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="1962" selection-start-line="1962" selection-end-line="1962" />
             </state>
           </provider>
         </entry>
@@ -128,15 +138,23 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="1962" selection-start-line="1962" selection-end-line="1962" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="56" column="25" lean-forward="true" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+        <state relative-caret-position="239">
+          <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#316#331#0" expanded="true" />
-            <element signature="e#597#606#0" expanded="true" />
-            <element signature="e#976#985#0" expanded="true" />
+            <element signature="e#1354#1369#0" expanded="true" />
+            <element signature="e#1466#1482#0" expanded="true" />
+            <element signature="e#2140#2149#0" expanded="true" />
+            <element signature="e#2611#2620#0" expanded="true" />
           </folding>
         </state>
       </provider>

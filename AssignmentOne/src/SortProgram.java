@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class SortProgram {
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         int n = Integer.valueOf(args[0]);
         String orderOfInput = args[1];

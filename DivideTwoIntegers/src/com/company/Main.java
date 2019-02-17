@@ -4,15 +4,26 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        int val = divide(-5,-1231);
+        int val = divide(2147483647,-2);
         System.out.println(val);
 
     }
 
 
     public static int divide(int dividend, int divisor) {
-        int a = Math.abs(dividend);
-        int b = Math.abs(divisor);
+        int maxInt = 2147483647;
+        int minInt = -2147483648;
+        if(divisor==-1 && dividend==minInt)
+        {
+            return maxInt;
+        }
+        if(Math.abs(divisor)==1)
+        {
+            if(divisor>0) return dividend;
+            else return -dividend;
+        }
+        long a = Math.abs((long)dividend), b = Math.abs((long)divisor);
+
         Boolean signed = false;
         if(dividend<0 && divisor<0)
         {
@@ -42,18 +53,7 @@ public class Main {
         {
             return 0;
         }
-        int val = Math.pow(2,31)-1;
-        if(divisor==-2147483648)
-        {
-            if(signed==true)
-            {
-                return -val;
-            }
-            else
-            {
-                return val;
-            }
-        }
+
 
         if(divisor==1 && dividend!=1)
         {
@@ -61,7 +61,7 @@ public class Main {
         }
 
 
-        int rem = Integer.MAX_VALUE;
+        long rem = Integer.MAX_VALUE;
         int counter = 0;
         while(rem>=b)
         {

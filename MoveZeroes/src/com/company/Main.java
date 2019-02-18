@@ -41,6 +41,17 @@ public class Main {
                 swap(nums,(0+nums.length-1)/2,((0+nums.length-1)/2)+1);
             }
         }
+
+        public static void swap(int[] inputArray, int i,int j)
+        {
+        if(i==j)
+        {
+            return;
+        }
+        int temp = inputArray[i];
+        inputArray[i] = inputArray[j];
+        inputArray[j] = temp;
+    }
     }*/
     public static void moveZeroes(int[] nums) {
         int snowBallSize = 0;
@@ -59,34 +70,4 @@ public class Main {
         }
     }
 
-    /*public static void moveZeroes(int[] nums) {
-        for(int i=0,j=nums.length-1;i<j;i++)
-        {
-            if(nums[i]==0 && nums[i+1]!=0)
-            {
-                swap(nums,i,i+1);
-                //System.out.println(nums[i]+" A"+nums[i+1]);
-            }
-            else if(i==j)
-            {
-                swap(nums,(nums.length-1)/2,j);
-            }
-            else if(nums[i]!=0 && nums[i+1]!=0)
-            {
-
-            }
-        }
-    }*/
-
-
-    public static void swap(int[] inputArray, int i,int j)
-    {
-        if(i==j)
-        {
-            return;
-        }
-        int temp = inputArray[i];
-        inputArray[i] = inputArray[j];
-        inputArray[j] = temp;
-    }
 }

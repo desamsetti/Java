@@ -5,7 +5,8 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         //int[] inputArray = {3,1,2,4};
-        int[] inputArray = {1,3,5,7,9,2,4,6,8};
+        //int[] inputArray = {1,3,5,7,9,2,4,6,8};
+        int[] inputArray = {0,1,2};
         int[] outputArray = sortArrayByParity(inputArray);
 
         for(int i=0;i<outputArray.length;i++)
@@ -13,6 +14,9 @@ public class Main {
             System.out.print(outputArray[i]+",");
         }
     }
+
+
+
 
     public static int[] sortArrayByParity(int[] A) {
         int i=0;
@@ -53,4 +57,20 @@ public class Main {
         inputArray[i] = inputArray[j];
         inputArray[j] = temp;
     }
+
+
+    /*public int[] sortArrayByParity(int[] A) {
+        for (int i = 0, j = 0; j < A.length; j++)
+            if (A[j] % 2 == 0) {
+                int tmp = A[i];
+                A[i++] = A[j];
+                A[j] = tmp;;
+            }
+        return A;
+    }*/
+
+
+
+
+
 }

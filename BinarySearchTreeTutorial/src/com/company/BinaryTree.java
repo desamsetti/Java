@@ -278,21 +278,31 @@ public class BinaryTree {
 
 
 
-    public void levelOrderTraverse(Node root1) {
+
+
+    public List<Double> levelOrderTraverse(Node root1) {
         if (root1 == null) {
-            return;
+            return null;
         }
+        List<Double> res = new LinkedList<Double>();
 
         Queue<Node> q1 = new LinkedList<Node>();
-        Queue<Node> q2 = new LinkedList<Node>();
 
         q1.add(root1);
 
-        while(!q1.isEmpty()){
-            root1 = q1.poll();
-            q2.add(root1);
+        while(!q1.isEmpty()) {
+            int size = q1.size();
+            double t = 0;
 
+            for (int i = 0; i < size; i++) {
+                Node c = q1.poll();
+                t += c.key;
+                if (c.leftChild != null) q1.add(c.leftChild);
+                if (c.rightChild != null) q1.add(c.rightChild);
+            }
+            res.add(t / size);
         }
+        return res;
     }
 
 

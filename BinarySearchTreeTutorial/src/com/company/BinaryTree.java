@@ -257,7 +257,7 @@ public class BinaryTree {
     }
 
 
-    public void levelOrderTraverse(Node root1) {
+    /*public void levelOrderTraverse(Node root1) {
         if (root1 == null) {
             return;
         }
@@ -273,6 +273,25 @@ public class BinaryTree {
             if (root1.rightChild != null) {
                 q.add(root1.rightChild);
             }
+        }
+    }*/
+
+
+
+    public void levelOrderTraverse(Node root1) {
+        if (root1 == null) {
+            return;
+        }
+
+        Queue<Node> q1 = new LinkedList<Node>();
+        Queue<Node> q2 = new LinkedList<Node>();
+
+        q1.add(root1);
+
+        while(!q1.isEmpty()){
+            root1 = q1.poll();
+            q2.add(root1);
+
         }
     }
 

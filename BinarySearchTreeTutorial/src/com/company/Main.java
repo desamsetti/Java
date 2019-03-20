@@ -19,7 +19,7 @@ public class Main {
         newTree.addNode(60);
 
 
-        System.out.print("The Recursive PreOrder is  : ");
+        /*System.out.print("The Recursive PreOrder is  : ");
         newTree.preOrder(newTree.root);
         System.out.println();
 
@@ -31,7 +31,7 @@ public class Main {
         newTree.postOrder(newTree.root);
         System.out.println();
 
-        System.out.print("Enter a key value to delete : ");
+        System.out.print("Enter a key value to delete : ");*/
         /*Scanner sc = new Scanner(System.in);
         int keyVal = sc.nextInt();
         newTree.deleteNode(keyVal);*/
@@ -52,6 +52,8 @@ public class Main {
         System.out.println();
         System.out.println("The height of the tree is : "+newTree.Height(newTree.root));
         System.out.println();
+
+        newTree.levelOrderTraverse(newTree.root);
 
 
         //sc.close();

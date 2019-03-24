@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        String input = "ffffffffffffffffff";
+        String input = "Hello";
         System.out.println(detectCapitalUse(input));
     }
 
@@ -17,4 +17,10 @@ public class Main {
         }
         return counter == 0 || counter == 1 || counter == word.length() && (Character.isUpperCase(word.charAt(0)));
     }
+
+    /*public static boolean detectCapitalUse(String word)
+        {
+            return word.toUpperCase().equals(word) || word.toLowerCase().equals(word)
+                    || (word.charAt(0) + word.substring(1,word.length()).toLowerCase()).equals(word);
+        }*/
 }

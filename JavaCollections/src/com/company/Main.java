@@ -1,8 +1,6 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
@@ -37,6 +35,12 @@ public class Main {
         //int lastIndex = list1.lastIndexOf(20);
         //System.out.println(lastIndex);
         list1.add(2,"     ");
+
+        //Creating an Object variable and assigning it a value from list1 by using list1.get(index)
+        Object val1 = list1.get(4);
+
+        System.out.println(val1);
+
         ((ArrayList) list1).trimToSize(); //Trims array list size to a list
 
         //System.out.println(list1);
@@ -47,9 +51,10 @@ public class Main {
         arrayList1.add(" ");
         arrayList1.add("List");
         arrayList1.add(20);
-
+        Object val2 = arrayList1.get(3);
+        //System.out.println(val2);
         arrayList1.toArray();
-        System.out.println(arrayList1);
+        //System.out.println(arrayList1);
 
         //Creating a Generic LinkedList and an Integer LinkedList, adding elements and printing them
         LinkedList linkedList1 = new LinkedList();
@@ -57,18 +62,62 @@ public class Main {
         linkedList1.add("Linked");
         linkedList1.add(" ");
         linkedList1.add("List");
-        System.out.println(linkedList1);
+        //System.out.println(linkedList1);
 
         integerLinkedList.add(1);
         integerLinkedList.add(2);
         integerLinkedList.add(3);
         integerLinkedList.add(4);
         integerLinkedList.add(5);
-        System.out.println(integerLinkedList.lastIndexOf(4));
+
+        Object val3 = integerLinkedList.get(3);
+
+
+        //System.out.println(integerLinkedList.lastIndexOf(4));
         integerLinkedList.addFirst(100);
         integerLinkedList.addLast(1000);
-        System.out.println(integerLinkedList.size());
-        System.out.println(integerLinkedList.contains(5));
-        System.out.println(integerLinkedList);
+        //System.out.println(integerLinkedList.size());
+        //System.out.println(integerLinkedList.contains(5));
+        //System.out.println(integerLinkedList);
+
+
+        Iterator<Integer> itr1 = integerLinkedList.iterator();
+
+
+        while(itr1.hasNext()){
+            Integer val = itr1.next();
+            System.out.println(val);
+        }
+
+        //Priority Queues sort the data for us
+        PriorityQueue<Integer> priorityQueue1 = new PriorityQueue<Integer>();
+        for(Integer i=10;i>0;i--){
+            priorityQueue1.add(i);
+        }
+
+
+
+        System.out.println(priorityQueue1);
+
+
+        //Sets do not add duplicate elements.
+        HashSet<String> hashSet = new HashSet<String>();
+        hashSet.add("John");
+        hashSet.add("Joe");
+        hashSet.add("Henry");
+        hashSet.add("John");
+        hashSet.add("Robert");
+        System.out.println(hashSet);
+
+
+        //TreeSet is a sorted version of a Set
+        TreeSet<Integer> treeSet = new TreeSet<Integer>();
+        for(Integer i=10;i>0;i--){
+            treeSet.add(i);
+        }
+
+        for(Integer i:treeSet){
+            System.out.print(i+", ");
+        }
     }
 }

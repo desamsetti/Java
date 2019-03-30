@@ -9,13 +9,16 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         //int output = getFibonacciNumberTopDown(6);
+        //Creating startTime to get the time before calling the method
         long startTime = System.nanoTime();
         //methodToTime();
 
-        //int output = fib(30);
+        int output = fib(30);
         //int output = fibonacci(30);
         //int output = getFibonacciNumberTopDown(30);
+        //Creating endTime to get the time after calling the method
         long endTime = System.nanoTime();
+
 
 
 

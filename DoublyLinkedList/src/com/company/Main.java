@@ -33,10 +33,12 @@ public class Main {
 
         doublyLinkedList.pushAtEnd(30);
 
-        doublyLinkedList.reverse();
+        //doublyLinkedList.reverse();
+
+        //doublyLinkedList.deleteAtEnd();
+
+        //doublyLinkedList.deleteAtGivenPosition(5);
 
         doublyLinkedList.printList(doublyLinkedList.head);
     }
-
-
 }

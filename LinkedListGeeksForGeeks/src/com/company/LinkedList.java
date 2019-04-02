@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Stack;
+
 public class LinkedList {
     Node head;
 
@@ -167,5 +169,51 @@ public class LinkedList {
         else{
             return search(head.next,x);
         }
+    }
+
+
+    public Boolean palindromeLinkedList(Node head){
+
+        //Creating a Stack
+        Stack<Node> s = new Stack<Node>();
+        //Creating a count variable to get the count of elements inside LinkedList
+        int count = getCount();
+
+        if(count==0){
+            return true;
+        }
+        if(count==1){
+            return true;
+        }
+        if(count==2){
+            return head.data==head.next.data;
+        }
+
+
+
+        Node current = head;
+        //Lets push all elements upto half of the count to the stack
+        for(int i=0;i<count;i++){
+                if(i<count/2){
+                    //System.out.println(current.data);
+                    s.push(current);
+                    current = current.next;
+                }
+        }
+
+        if(count%2!=0){
+            current = current.next;
+        }
+
+        for(int i=0;i<count/2;i++){
+            Node x = s.pop();
+            //System.out.println(x.data+"="+current.data);
+            //current = current.next;
+            if(x.data!=current.data){
+                return false;
+            }
+            current = current.next;
+        }
+        return true;
     }
 }

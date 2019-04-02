@@ -104,4 +104,48 @@ public class DoublyLinkedList {
     }
 
 
+
+    public void delete(){
+        if(head == null){
+            return;
+        }
+        else{
+            head = head.next;
+        }
+    }
+
+
+    public void deleteAtEnd(){
+        if(head==null){
+            return;
+        }
+        else{
+            Node current = head;
+            while(current.next!=null){
+                current = current.next;
+            }
+            current.prev.next=null;
+        }
+    }
+
+    public void deleteAtGivenPosition(int x){
+        int counter = 0;
+        if(head==null){
+            return;
+        }
+        else{
+            Node current = head;
+            while(current.next!=null && counter!=x){
+                counter++;
+                current = current.next;
+            }
+
+            current.prev.next = current.next;
+            current.prev = null;
+            current.next = null;
+
+        }
+    }
+
+
 }

@@ -5,7 +5,33 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        //Creating a LinkedList
+
+        LinkedList list1 = new LinkedList();
+
+        list1.head = new LinkedList.Node(1);
+
+        LinkedList.Node second = new LinkedList.Node(2);
+
+
+        LinkedList.Node third = new LinkedList.Node(5);
+
+        LinkedList.Node fourth = new LinkedList.Node(2);
+
+        LinkedList.Node fifth = new LinkedList.Node(1);
+
+        list1.head.next = second;
+
+        second.next = third;
+
+        third.next = fourth;
+
+        fourth.next = fifth;
+
+        fifth.next = null;
+
+        System.out.println(list1.palindromeLinkedList(list1.head));
+
+        /*//Creating a LinkedList
         LinkedList list1 = new LinkedList();
 
         //Setting up the head of the LinkedList to 1
@@ -59,6 +85,6 @@ public class Main {
 
         System.out.println();
         //System.out.println("Searching for an element in the LinkedList : "+list1.search(list1.head,2));
-        System.out.println("Searching for an element in the LinkedList : "+list1.searchRecursive(list1.head,2));
+        System.out.println("Searching for an element in the LinkedList : "+list1.searchRecursive(list1.head,2));*/
     }
 }

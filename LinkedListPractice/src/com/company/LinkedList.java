@@ -220,14 +220,58 @@ public class LinkedList {
         }
 
         int total = x+y;
+
+        String val = String.valueOf(total);
+        String reverse = "";
+
+
+        for(int i = val.length() - 1; i >= 0; i--)
+        {
+            reverse = reverse + val.charAt(i);
+        }
+        int xChanged = Integer.parseInt(reverse);
         LinkedList newList = new LinkedList();
 
-        while(total!=0){
-            newList.push(total%10);
-            total /= 10;
+
+
+        while(xChanged!=0) {
+            newList.push(xChanged % 10);
+            xChanged /= 10;
+        }
+        return newList;
+    }
+    public void reverse() {
+        Node pointer = head;
+        Node previous = null, current = null;
+
+        while (pointer != null) {
+            current = pointer;
+            pointer = pointer.next;
+
+            // reverse the link
+            current.next = previous;
+            previous = current;
+            head = current;
+        }
+    }
+
+
+    public static Node addLast(Node header, int x) {
+        // save the reference to the header so we can return it.
+        Node ret = header;
+
+        // check base case, header is null.
+        if (header == null) {
+            return new Node(x);
         }
 
-        
-        return newList;
+        // loop until we find the end of the list
+        while ((header.next != null)) {
+            header = header.next;
+        }
+
+        // set the new node to the Object x, next will be null.
+        header.next = new Node(x);
+        return ret;
     }
 }

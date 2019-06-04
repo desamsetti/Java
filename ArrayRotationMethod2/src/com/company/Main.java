@@ -22,10 +22,11 @@ public class Main {
 
     public static void rotateArray(int[] input){
         int temp = input[0];
-        for(int i=0;i<input.length-1;i++){
+        int i=0;
+        for(i=0;i<input.length-1;i++){
             input[i] = input[i+1];
         }
-        input[input.length-1] = temp;
+        input[i] = temp;
     }
 
 

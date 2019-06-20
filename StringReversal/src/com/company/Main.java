@@ -21,7 +21,7 @@ public class Main {
         StringBuilder sb = new StringBuilder(input);
 
         System.out.println("The Reverse of the Entered string using StringBuilder is : "+sb.reverse().toString());
-        System.out.println("The Reverse of the Entered string is : " + reverseString(input));
+        System.out.println("The Reverse of the Entered string is : " + reverseString1(input));
 
 
 
@@ -36,5 +36,17 @@ public class Main {
             revString += (String.valueOf(input.charAt(i)));
         }
         return revString;
+    }
+
+
+    public static String reverseString1(String input){
+        char[] inputArray = input.toCharArray();
+        char[] outputArray = new char[input.length()];
+        int j = 0;
+        for(int i=input.length()-1;i>0;i--){
+            outputArray[j] = inputArray[i];
+            j++;
+        }
+        return outputArray.toString();
     }
 }

@@ -5,8 +5,12 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         //String input = "A man, a plan, a canal: Panama";
-        String input = "0P";
-        System.out.println(isPalindrome(input));
+        //System.out.println(isPalindrome(input));
+        String input = "aha";
+        StringBuilder sb = new StringBuilder(input);
+        System.out.println(sb.reverse());
+        System.out.println(input);
+        System.out.println(sb.reverse().toString().equals(input));
     }
 
     public static boolean isPalindrome(String s) {

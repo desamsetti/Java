@@ -22,6 +22,7 @@ public class Main {
 
         System.out.println("The Reverse of the Entered string using StringBuilder is : "+sb.reverse().toString());
         System.out.println("The Reverse of the Entered string is : " + reverseString1(input));
+        reverseString2(input);
 
 
 
@@ -48,5 +49,20 @@ public class Main {
             j++;
         }
         return outputArray.toString();
+    }
+    public static void reverseString2(String input){
+        char tempArray[] = input.toCharArray();
+        int left,right = 0;
+        right = tempArray.length-1;
+
+        for(left = 0;left<right;left++,right--){
+            char temp = tempArray[left];
+            tempArray[left] = tempArray[right];
+            tempArray[right] = temp;
+        }
+
+        for(char c:tempArray){
+            System.out.print(c);
+        }
     }
 }

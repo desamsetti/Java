@@ -1,9 +1,10 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 class LinkedListOne<T> {
-
     //Properties
     Node<T> head;
     int count;
@@ -81,13 +82,18 @@ class LinkedListOne<T> {
         current.setNext(null);
         count--;
     }
-    public static void main(String[] args)
-    {
-        LinkedList<String> linkedList = new LinkedList<String>();
-        linkedList.add("Alice");
-        linkedList.add("Alicey");
-        System.out.println(linkedList);
+
+
+    //reversePrint
+    public static void reversePrint(Node head){
+        Node current = head;
+        List<Integer> list = new ArrayList<Integer>();
+        while(current!=null){
+            list.add((Integer)current.data);
+            current = current.next;
+        }
+        for(int i=list.size()-1;i>0;i--){
+            System.out.println(list.get(i));
+        }
     }
 }
-
-

@@ -38,5 +38,4 @@ public class Node<T> {
     {
         next = newNode;
     }
-
 }

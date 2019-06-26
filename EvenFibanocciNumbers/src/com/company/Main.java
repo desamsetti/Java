@@ -2,10 +2,9 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 public class Main {
-    static HashMap<Integer,Integer> map = new HashMap<Integer, Integer>();
+    static HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
     public static void main(String[] args) {
 	// write your code here
         ArrayList<Integer> list1 = new ArrayList<Integer>();
@@ -15,6 +14,8 @@ public class Main {
         {
             total = fibanocci(i);
             total1+=fibanocci(i);
+            //total = fib(i);
+            //total1+=fib(i);
             list1.add(total);
         }
         int sum = 0;
@@ -54,19 +55,17 @@ public class Main {
 
     public static int fibanocci(int x)
     {
-        Map<Integer,Integer> hashMap = new HashMap<Integer,Integer>();
-        if(hashMap.containsKey(x)){
-            return hashMap.get(x);
+        if(x==0)
+        {
+            return 0;
         }
-        else {
-            if (x == 0) {
-                return 0;
-            } else if (x == 1) {
-                return 1;
-            } else {
-                hashMap.put(x,fibanocci(x-1)+fibanocci(x-2));
-                return fibanocci(x - 1) + fibanocci(x - 2);
-            }
+        else if(x==1)
+        {
+            return 1;
+        }
+        else
+        {
+            return fibanocci(x-1)+fibanocci(x-2);
         }
     }
 

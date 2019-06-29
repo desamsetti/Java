@@ -10,6 +10,7 @@ public class Main {
         int day = 5;
         int year = 2015;
         System.out.println(findDay(month,day,year));
+        System.out.println(findDay(month,day,year));
 
     }
 

@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -8,8 +9,12 @@ public class Main {
 	// write your code here
         int[] myIntegers = getIntegers(5);
 //        printArray(myIntegers);
-        sortArray(myIntegers);
-        printArray(myIntegers);
+        Arrays.sort(myIntegers);
+        for(Integer i:myIntegers){
+            System.out.println(i);
+        }
+        /*sortArray(myIntegers);
+        printArray(myIntegers);*/
     }
 
 

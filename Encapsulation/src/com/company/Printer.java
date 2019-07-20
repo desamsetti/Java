@@ -6,6 +6,13 @@ public class Printer {
     private int pagesPrinted;
     private boolean duplex;
 
+    public int getTonerLevel() {
+        return tonerLevel;
+    }
+
+    public boolean isDuplex() {
+        return duplex;
+    }
 
     public Printer(int tonerLevel, boolean duplex) {
         if(tonerLevel>-1 && tonerLevel<=100)

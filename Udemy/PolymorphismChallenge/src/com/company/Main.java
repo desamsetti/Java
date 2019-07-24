@@ -67,9 +67,14 @@ public class Main {
         System.out.println(car.brake());
 
         BMW bmw = new BMW("BMW i8",6);
-        System.out.println(car.startEngine());
-        System.out.println(car.accelerate());
-        System.out.println(car.brake());
+        System.out.println(bmw.startEngine());
+        System.out.println(bmw.accelerate());
+        System.out.println(bmw.brake());
+
+        Audi audi = new Audi("Audi R8",6);
+        System.out.println(audi.startEngine());
+        System.out.println(audi.accelerate());
+        System.out.println(audi.brake());
 
     }
 }

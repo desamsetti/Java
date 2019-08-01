@@ -30,6 +30,8 @@ public class Main {
             System.out.println("Element " + i + ", typed value was " + myIntegers[i]);
         }
 
+        printArray(myIntegers);
+
         System.out.println("The average is "+getAverage(myIntegers));
 
     }

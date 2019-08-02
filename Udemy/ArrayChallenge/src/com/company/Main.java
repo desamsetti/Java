@@ -10,6 +10,8 @@ public class Main {
 	// write your code here
         int[] myIntegers = getIntegers(5);
         int[] sorted = sortIntegers(myIntegers);
+        Arrays.sort(myIntegers);
+        printArray(myIntegers);
         printArray(sorted);
     }
 
@@ -52,6 +54,4 @@ public class Main {
         //return inputArray;
         return sortedArray;
     }
-
-
 }

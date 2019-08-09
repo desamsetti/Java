@@ -8,6 +8,7 @@ public class Main {
 	// write your code here
         int[] inputArray = readIntegers(5);
         System.out.println("The minimum element is :"+findMin(inputArray));
+        System.out.println("The maximum element is :"+findMax(inputArray));
     }
 
     public static int[] readIntegers(int count){
@@ -28,5 +29,15 @@ public class Main {
             }
         }
         return minElement;
+    }
+
+    public static int findMax(int[] inputArray){
+        int maxElement = inputArray[0];
+        for(int i=0;i<inputArray.length;i++){
+            if(inputArray[i]>maxElement){
+                maxElement = inputArray[i];
+            }
+        }
+        return maxElement;
     }
 }

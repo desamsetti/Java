@@ -11,6 +11,8 @@ public class PracticeHelloSpringApp {
 		
 		System.out.println(golfCoach.getDailyWorkout());
 		
+		System.out.println(golfCoach.getDailyFortune());
+		
 		context.close();
 	}
 	

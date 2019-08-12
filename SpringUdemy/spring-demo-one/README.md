@@ -1,3 +1,4 @@
+1. Spring Application Set Up
 1. This application is the Basic Spring application.
 
 2. This is using XML Configuration file.
@@ -27,3 +28,35 @@
     
 12. Changing the class="com.luv2code.springdemo.TrackCoach"> to 
 	class="com.luv2code.springdemo.BaseballCoach"> changes the output.
+	
+	
+2. Dependency Injection using Constructor
+
+	1. First we need to have a parameterized Constructor for the class like BaseballCoach, which takes  in the field of a Class like FortuneService.
+	
+	2. Then methods like getDailyFortune() returns the output like, 
+	fortuneService.getFortune() which is from the Interface.
+	
+	3. HappyFortuneService is a class which implements the FortuneService Interface and implements the method getFortune() which returns a string.
+	
+	4.Now, in the PracticeHelloSpringApp, we can just call the previous object created from the same bean and then call the method, getDailyFortune().
+	
+	5. We need to write this inside the ApplicationContext,
+	<!-- set up constructor injection -->
+    	  <constructor-arg ref="myFortune"/>
+    6. Also, we need to write this Dependency.
+    <!--  define the dependency -->
+    <bean id="myFortune"
+    	class="com.luv2code.springdemo.HappyFortuneService">    	    	
+    </bean>
+    
+ 3. Dependency Injection using Setter Injection
+ 
+	1. We need to write a Setter method for the variable.
+	
+	2. If the name of the setter method for example is setFortuneService, then the property name inside the bean that is to be created in the ApplicationContext is to be named as fortuneService.
+	
+	3. A property should be created inside the Application context bean which is called as the Setter Injection.
+	
+	4.  
+		fortuneService. 

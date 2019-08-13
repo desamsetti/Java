@@ -50,7 +50,7 @@
     	class="com.luv2code.springdemo.HappyFortuneService">    	    	
     </bean>
     
- 3. Dependency Injection using Setter Injection
+3. Dependency Injection using Setter Injection
  
 	1. We need to write a Setter method for the variable.
 	
@@ -58,5 +58,20 @@
 	
 	3. A property should be created inside the Application context bean which is called as the Setter Injection.
 	
-	4.  
-		fortuneService. 
+	4. This property has a name and a value in the ApplicationContext.xml file inside the bean. We can change the value in the ApplicationContext file when we want to change the information.
+	
+	5. Based on the bean name, the property name, the new object created can call the setter or getter methods like ObjectName.getPropertyName(); or ObjectName.setPropertyName() etc.
+	
+4. Loading the values from a file
+	5. Create a text file and create the properties like,
+	foo.email=myeasycoach@luv2code.com
+	foo.team=Royal Challengers Bangalore
+	then, in the ApplicationContext.xml file,
+	<!-- load the properties file: sport.properties -->
+    <context:property-placeholder location="classpath:sport.properties"/>
+    then, inside the bean, inside the properties, change the value to ${propertyName}.
+    
+
+
+	
+	

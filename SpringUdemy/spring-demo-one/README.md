@@ -131,3 +131,20 @@
  		1. If there are multiple classes implementing the same interface, like HappyFortuneService, DatabaseFortuneService, RandomFortuneService, RESTFortuneService are implementing the same FortuneService Interface, then it throws an error.
  		
  		2. We can specify what class we want by using the @Qualifier("happyFortuneService").
+ 		
+ 	4.7 We can write the Init methods and Destroy methods by using the @PostConstruct and @PreDestroy annotations on the methods.
+ 	
+ 	
+ 	5. Spring Configuration with Java Code (No XML)
+ 	
+ 		5.1 We can use Java annotations and not use XML.
+ 		
+ 		5.2 Create a class like SportConfig.java, then add
+ 			@Configuration
+			@ComponentScan("com.luv2code.springdemo")
+			annotations.
+		5.3 In the place of ClassPathXmlApplicationContext, we can use 
+			AnnotationConfigApplicationContext and all the steps are same.
+		 
+	
+	

@@ -12,7 +12,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ReadingFromFileFortuneService implements FortuneService {
-	
+
+	@Override
+	public String getFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	/*
 	private String fileName = "E:\\JavaUdemy\\spring-demo-annotations\\bin\\com\\luv2code\\springdemo";
 	private List<String> theFortunes;
 	
@@ -47,5 +53,5 @@ public class ReadingFromFileFortuneService implements FortuneService {
 		String tempFortune = theFortunes.get(index);
 		
 		return tempFortune;
-	}
+	}*/
 }

@@ -10,7 +10,7 @@ public class Main {
         String input = "This is a String with vowels";
         //String input = "Welcome to geeksforgeeks";
         //String output = removeVowels(input);
-        String output = removeVowelsUsingList(input);
+        String output = removeVowelsUsingListCharacterArrayStringBuffer(input);
         System.out.println(output);
     }
 
@@ -27,7 +27,7 @@ public class Main {
         return newStr.toString();
     }*/
 
-    public static String removeVowelsUsingList(String input){
+    public static String removeVowelsUsingListCharacterArrayStringBuffer(String input){
         Character[] vowels = {'a','e','i','o','u','A','E','I','O','U'};
 
         List<Character> newStr = Arrays.asList(vowels);

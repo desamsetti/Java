@@ -4,8 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        String input = "a1b2";
+        //String input = "a1b2";
         //String input = "3z4";
+        String input = "abc";
         String[] output = letterCasePermutation(input);
 
         for(String s:output){
@@ -23,4 +24,6 @@ public class Main {
 
         return outputArray;
     }
+
+
 }

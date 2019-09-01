@@ -7,7 +7,8 @@ public class Main {
         //String input = "a1b2";
         //String input = "3z4";
         //String input = "abc";
-        String input = "123";
+        //String input = "123";
+        String input = "ABC";
         String[] output = letterCasePermutation(input);
 
         for(String s:output){

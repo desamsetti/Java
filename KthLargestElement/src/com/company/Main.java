@@ -10,5 +10,6 @@ public class Main {
         System.out.println(kthLargest.add(10));
         System.out.println(kthLargest.add(9));
         System.out.println(kthLargest.add(4));
+        System.out.println(kthLargest.add(15));
     }
 }
